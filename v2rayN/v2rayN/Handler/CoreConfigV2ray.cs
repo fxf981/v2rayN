@@ -1050,6 +1050,7 @@ namespace v2rayN.Handler
                     GenOutbound(item, outbound);
                     outbound.tag = Global.ProxyTag + inbound.port.ToString();
                     v2rayConfig.outbounds.Add(outbound);
+                    GenMoreOutbounds(node, v2rayConfig);
 
                     //rule
                     RulesItem4Ray rule = new()
